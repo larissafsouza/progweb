@@ -1,0 +1,26 @@
+div{
+	border: 12px solid sienna;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color: rgba(208, 208, 208, 0.8);
+	margin-right: 50%;
+	width: 25%;
+	box-shadow: 4px 4px 10px 2px black inset;
+	box-shadow: 4px 4px 10px 2px black;
+	text-align: center;
+	padding: px;
+	margin-left: 20%;
+	margin-top:10%;
+}
+
+body{
+	background-image: url("roma.jpg");
+}
+
+p{
+		font-size: 15pt;
+
+}
+
