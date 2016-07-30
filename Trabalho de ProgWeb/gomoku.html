@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jogo Gomoku</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Jogo Gomoku&nbsp;&nbsp;<button id="iniciar" type="button">Iniciar</button></h1> 
+			<p>
+				O Gomoku, também conhecido como Gobang, é um jogo de tabuleiro estratégico tradicionalmente jogado com peças de Go (peças negras e brancas) em um tabuleiro de Go ligeiramente modificado (15x15 interseções). No entanto, ao contrario deste, uma vez que as peças são colocadas não podem ser movidas ou retiradas do tabuleiro. No inicio do jogo, as negras começam, e os jogadores alternam na colocação de uma pedra da sua cor em uma interseção vazia. O vencedor é o primeiro jogador a obter uma linha ininterrupta de cinco pedras na horizontal, vertical ou diagonal.
+			</p> 
+			<table style="float:left">
+				<tr>
+					<td>
+						<script language="JavaScript">
+							document.writeln("<table class='tabuleiro'>");
+							for (i=0; i < 15; i++) { 
+								document.writeln("<tr>");
+				  				for (j=0; j < 15; j++) {
+				    				document.write("<td><a href=\"javascript:Selecionado("+i+","+j+")\"><img src=\"tabu.gif\" width=30 height=30 /></a></td>");
+				    			}
+				  				document.writeln("</tr>");
+							}
+							document.writeln("</table>");
+						</script>
+					</td>
+				</tr>
+			</table>
+
+			<div class="panel panel-default" style="float:left; margin: 15px">
+				  <div class="panel-heading">Jogador da vez</div>
+				  <div class="panel-body" style="text-align: center">
+						<img id="jogador_1" class="jogador" src="1.gif" width=32 />
+						<img id="jogador_2" class="jogador" src="2.gif" width=32 />
+				  </div>
+			</div>
+
+			<div id="caixaVenceu" class="w3-modal">
+			  <div class="w3-modal-content">
+			    <div class="w3-container">
+			      <span onclick="document.getElementById('caixaVenceu').style.display='none'" class="w3-closebtn">&times;</span>
+			      <p id="win"></p>
+			    </div>
+			  </div>
+			</div>		
+
+		</div>
+
+		<script language="JavaScript" src="gomoku.js"></script>
+	</body>
+</html>
