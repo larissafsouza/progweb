@@ -116,11 +116,11 @@ class PartidaController extends Controller
     // Verifico se algum jogador já venceu a partida. Isso é feito
     // através da função verificaVencedor, que deve ser criada dentro do 
     // controlador.
- $vencedor = null;
+ $vencedor = 0;
     if($jogada_model->linha!=NULL && $jogada_model->coluna!=NULL){
             $vencedor = $this->verificaVencedor($jogada_model->linha, $jogada_model->coluna,$jogadas_array,$ultimo_jogador);
     }
-    if ($vencedor!=null) {
+    if ($vencedor) {
         $model->vencedor = $vencedor;
         $model->save();
     }
@@ -211,7 +211,7 @@ class PartidaController extends Controller
             $dX++;
             $dY--;
         }
-        return null;
+        return 0;
     }
 
 

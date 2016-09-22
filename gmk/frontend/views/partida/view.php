@@ -109,20 +109,6 @@ if (!$vencedor) {
                     if ($jogadas[$row][$col]!=0) {
                         $this->registerJs("Clicked(".$row.",".$col.",".$jogadas[$row][$col].");");
                     }
-
-                    /*
-                    if ($jogador_da_vez == $model->id_user_1) {
-                        $this->registerJs('
-                                            document.getElementById("jogador_1").style.opacity = 1;
-                                            document.getElementById("jogador_2").style.opacity = 0.3;
-                                         ');
-                    }
-                    else {
-                            $this->registerJs('
-                                                document.getElementById("jogador_2").style.opacity = 1;
-                                                document.getElementById("jogador_1").style.opacity = 0.3;
-                                             ');
-                    } */
                 }
                 echo "</tr>";
             }
@@ -131,16 +117,6 @@ if (!$vencedor) {
     </div>
 
     </div>
-
-
-    <div id="caixaVenceu" class="w3-modal">
-              <div class="w3-modal-content">
-                <div class="w3-container">
-                  <span onclick="document.getElementById('caixaVenceu').style.display='none'" class="w3-closebtn">&times;</span>
-                  <p id="win"></p>
-                </div>
-              </div>
-            </div>
 
     <span id="jog_1" data-user="<?= $model->id_user_1?>" style="display:none"/>
         <span id="jog_2" data-user="<?= $model->id_user_2?>" style="display:none"/>
